@@ -12,7 +12,7 @@ export const profile = {
   openToWork: true,
 
   // Files in the /public folder, with exactly these names:
-  photo: 'photo.jpg',
+  photo: 'IMG_20260226_180157.jpg',
   cv: 'David_Maharjan_CV.pdf',
 
   email: 'dmaharjan224@gmail.com',
