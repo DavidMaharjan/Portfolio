@@ -1,7 +1,7 @@
 """End-to-end UI tests for the portfolio site.
 
-Run against the dev server:      pytest
-Run against the built preview:   pytest --base-url http://localhost:4173
+Serve the site first:   python3 -m http.server 4173
+Then run:               pytest
 """
 import re
 

@@ -19,26 +19,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run build
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - run: python -m playwright install --with-deps chromium
-      - name: Start preview server
+
+      # Only the website files go online, not the tests or config.
+      - name: Collect site files
         run: |
-          npm run preview &
-          npx --yes wait-on http://localhost:4173
+          mkdir _site
+          cp -r index.html css js assets CNAME _site/
+
+      - name: Start a local server
+        run: |
+          python -m http.server 4173 --directory _site &
+          for i in $(seq 1 30); do curl -sf http://localhost:4173 >/dev/null && break; sleep 1; done
       - name: Run UI tests
         run: pytest --base-url http://localhost:4173
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: _site
 
   deploy:
     needs: test

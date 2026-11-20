@@ -1,29 +1,350 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>David Maharjan | Software QA Engineer</title>
-    <meta name="description" content="David Maharjan, Software QA Engineer in Lalitpur, Nepal. Manual, exploratory, API and cross-browser testing, plus Playwright automation." />
-    <meta property="og:title" content="David Maharjan | Software QA Engineer" />
-    <meta property="og:description" content="I make sure software works the way people expect, before it reaches them." />
-    <meta property="og:image" content="./photo.jpg" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&family=JetBrains+Mono:wght@400;700&display=swap" />
-    <script>
-      // Apply the saved (or system) theme before the page draws, so it never flashes.
-      (function () {
-        var t = null;
-        try { t = localStorage.getItem('theme'); } catch (e) {}
-        if (t !== 'light' && t !== 'dark') t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        document.documentElement.dataset.theme = t;
-      })();
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Maharjan | Software QA Engineer</title>
+  <meta name="description" content="David Maharjan, Software QA Engineer in Lalitpur, Nepal. Manual, exploratory, API and cross-browser testing, plus Playwright automation.">
+  <meta property="og:title" content="David Maharjan | Software QA Engineer">
+  <meta property="og:description" content="I make sure software works the way people expect, before it reaches them.">
+  <meta property="og:image" content="assets/photo.jpg">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700;800&family=Raleway:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Apply the saved (or system) theme before the page draws, so it never flashes.
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#services">Skip to content</a>
+
+  <!-- ============ Header ============ -->
+  <header class="header">
+    <div class="wrap header-row">
+      <a class="logo" href="#top" aria-label="David Maharjan, back to top">
+        <span class="logo-mark">D</span>David<span class="logo-dot">.</span>
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="#services">What I bring</a>
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#journey">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="round-btn" data-testid="theme-toggle" aria-label="Switch theme" title="Switch theme">
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button type="button" class="round-btn menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <svg class="wave wave-hero" viewBox="0 0 1600 295" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120c180-70 360-110 560-60s340 140 560 120 300-150 480-140v255H0z"/></svg>
+      <div class="wrap hero-row">
+        <div class="hero-text">
+          <span class="status"><span class="dot"></span>Open to work · Lalitpur, Nepal</span>
+          <h1>Hi, I’m David<span class="role">Software QA Engineer</span></h1>
+          <p class="lead">I make sure software works the way people expect, before it reaches them.</p>
+          <p>QA engineer testing an enterprise GRC platform. I turn requirements into test cases, find the defects that matter, and stay with them until they are fixed and verified. Now adding automation with Python and Playwright.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact">Get in touch</a>
+            <a class="btn btn-outline" href="assets/David_Maharjan_CV.pdf" download="David_Maharjan_CV.pdf" data-testid="cv-download">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+              Download CV
+            </a>
+          </div>
+
+          <!-- Socials: LinkedIn, GitHub and an Email button that shows the address -->
+          <div class="socials-block" data-testid="socials">
+            <ul class="socials">
+              <li>
+                <a class="social" href="https://www.linkedin.com/in/david-maharjan-896138277" target="_blank" rel="noopener noreferrer" title="Open my LinkedIn profile in a new tab">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg>
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a class="social" href="https://github.com/DavidMaharjan" target="_blank" rel="noopener noreferrer" title="Open my GitHub profile in a new tab">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+                  <span>GitHub</span>
+                </a>
+              </li>
+              <li>
+                <button type="button" class="social" data-email-toggle aria-expanded="false" title="Show my email address">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                  <span>Email</span>
+                </button>
+              </li>
+            </ul>
+            <div class="email-panel" data-testid="email-panel" hidden>
+              <span class="address">dmaharjan224@gmail.com</span>
+              <div class="email-actions">
+                <button type="button" data-testid="copy-email">Copy</button>
+                <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=dmaharjan224%40gmail.com" target="_blank" rel="noopener noreferrer">Open in Gmail</a>
+                <a href="mailto:dmaharjan224@gmail.com">Open mail app</a>
+              </div>
+              <button type="button" class="close" aria-label="Close">×</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo with a small QA checklist card -->
+        <div class="hero-visual">
+          <div class="photo-wrap">
+            <div class="dash-frame" aria-hidden="true"></div>
+            <img class="photo" src="assets/photo.jpg" alt="Portrait of David Maharjan" width="420" height="360" data-testid="photo">
+          </div>          <div class="checklist">
+            <span class="checklist-title">Before every release</span>
+            <span class="check">Test cases from requirements</span>
+            <span class="check">Regression on 3 browsers</span>
+            <span class="check">Smoke test the build</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Highlights ============ -->
+    <section class="wrap highlights" aria-label="Highlights">
+      <div class="stat"><strong>1+ year</strong><span>testing enterprise software</span></div>
+      <div class="stat"><strong>4 modules</strong><span>tested end to end</span></div>
+      <div class="stat"><strong>3 browsers</strong><span>in every regression run</span></div>
+      <div class="stat"><strong>Postman</strong><span>Student Expert certified</span></div>
+    </section>
+
+    <!-- ============ Main column + sidebar ============ -->
+    <div class="wrap layout">
+      <div class="main-col">
+
+        <!-- What I bring -->
+        <section id="services" class="block">
+          <h2 class="section-title"><span>What I bring</span></h2>
+          <div class="grid-2">
+            <div class="card service">
+              <span class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+              <h3>Manual &amp; exploratory testing</h3>
+              <p>Functional, regression, smoke and UAT testing driven by the requirements, plus exploratory sessions to find what the test cases missed.</p>
+            </div>
+            <div class="card service">
+              <span class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4H6a2 2 0 0 0-2 2v4l-2 2 2 2v4a2 2 0 0 0 2 2h2M16 4h2a2 2 0 0 1 2 2v4l2 2-2 2v4a2 2 0 0 1-2 2h-2"/></svg></span>
+              <h3>API testing</h3>
+              <p>CRUD testing of REST APIs in Postman: request payloads, authentication, status codes and JSON responses, kept in reusable collections.</p>
+            </div>
+            <div class="card service">
+              <span class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg></span>
+              <h3>Cross-browser &amp; responsive</h3>
+              <p>Checking that features behave the same on Chrome, Firefox and Edge, and on different screen sizes.</p>
+            </div>
+            <div class="card service">
+              <span class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span>
+              <h3>Test automation</h3>
+              <p>Writing UI tests with Python and Playwright, using locators and assertions, and running them in CI. This site has its own test suite.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Selected work -->
+        <section id="work" class="block">
+          <h2 class="section-title"><span>Selected work</span></h2>
+
+          <article class="card featured" data-testid="work-card">
+            <div class="featured-visual">
+              <div class="featured-head">
+                <strong>GRC platform · modules under test</strong>
+                <span>Two-week Scrum sprints</span>
+              </div>
+              <div class="modules">
+                <div class="module"><strong>Risk</strong><span class="bar"></span></div>
+                <div class="module"><strong>Policy</strong><span class="bar"></span></div>
+                <div class="module"><strong>Compliance</strong><span class="bar"></span></div>
+                <div class="module"><strong>Service Provider</strong><span class="bar"></span></div>
+              </div>
+            </div>
+            <div class="featured-body">
+              <ul class="tags"><li>Functional</li><li>Regression</li><li>UAT</li><li>Azure DevOps</li></ul>
+              <h3>Testing an enterprise GRC platform</h3>
+              <span class="kind">Professional work · Cyberensic</span>
+              <p>End-to-end testing of a governance, risk and compliance web application across its Risk, Policy, Compliance and Service Provider modules, in two-week Scrum sprints.</p>
+              <ul class="checks">
+                <li>Designed and ran test cases from business and functional requirements</li>
+                <li>Tracked defects from discovery to verified fix in Azure DevOps</li>
+                <li>Kept requirements, test cases, defects and releases traceable</li>
+                <li>Smoke-tested builds before UAT and production releases</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card project" data-testid="work-card">
+            <div class="project-visual code">
+              <span><b>POST</b> /policies <i>→ 201</i></span>
+              <span><b>GET</b> /policies/:id <i>→ 200</i></span>
+              <span><b>PUT</b> /policies/:id <i>→ 200</i></span>
+              <span><b class="danger">DELETE</b> no token <i>→ 401</i></span>
+            </div>
+            <div class="project-body">
+              <ul class="tags"><li>Postman</li><li>REST</li><li>JSON</li></ul>
+              <h3>Policy module API testing</h3>
+              <span class="kind">Professional work · Postman</span>
+              <p>Full CRUD coverage of the Policy API: valid and invalid payloads, authentication, status codes and response bodies, organised as a reusable Postman collection.</p>
+            </div>
+          </article>
+
+          <article class="card project" data-testid="work-card">
+            <div class="project-visual code">
+              <span class="muted">def test_login(page):</span>
+              <span class="pre">  page.get_by_label(<b>"Email"</b>)…</span>
+              <span class="pre">  page.get_by_role(<b>"button"</b>)…</span>
+              <span class="pre">  expect(page).to_have_url(…)</span>
+            </div>
+            <div class="project-body">
+              <ul class="tags"><li>Python</li><li>Playwright</li><li>Git</li></ul>
+              <h3>Playwright UI automation</h3>
+              <span class="kind">Personal project</span>
+              <p>Automated login and core user workflows with Python and Playwright, using role-based locators and web-first assertions, run with the Playwright test runner.</p>
+              <!-- Change to the project's own repository -->
+              <a class="more" href="https://github.com/DavidMaharjan" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="card project" data-testid="work-card">
+            <div class="project-visual pipeline">
+              <span class="step done">Build</span>
+              <span class="step done">pytest-playwright suite</span>
+              <span class="step">Deploy to GitHub Pages</span>
+            </div>
+            <div class="project-body">
+              <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>pytest-playwright</li><li>GitHub Actions</li></ul>
+              <h3>This portfolio, tested</h3>
+              <span class="kind">Personal project</span>
+              <p>Plain HTML, CSS and JavaScript. A pytest-playwright suite checks links, the CV download, the theme switch and mobile layout, and GitHub only deploys if every test passes.</p>
+              <!-- Change to this site's repository -->
+              <a class="more" href="https://github.com/DavidMaharjan" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
+            </div>
+          </article>
+        </section>
+
+        <!-- How I test -->
+        <section id="process" class="block">
+          <h2 class="section-title"><span>How I test</span></h2>
+          <ol class="steps">
+            <li><span class="num">1</span><div><strong>Understand</strong><span>Read the requirements and ask questions early, before anything is built.</span></div></li>
+            <li><span class="num">2</span><div><strong>Design</strong><span>Write test cases that cover the happy path, edge cases and negative cases.</span></div></li>
+            <li><span class="num">3</span><div><strong>Execute</strong><span>Run the tests, then explore around them to find what nobody expected.</span></div></li>
+            <li><span class="num">4</span><div><strong>Report</strong><span>Log defects in Azure DevOps with steps, severity, priority, expected and actual results.</span></div></li>
+            <li><span class="num">5</span><div><strong>Verify</strong><span>Retest fixes with the developer and run regression so nothing else broke.</span></div></li>
+            <li><span class="num">6</span><div><strong>Release</strong><span>Smoke test the build before UAT and production deployments.</span></div></li>
+          </ol>
+        </section>
+
+        <!-- Experience -->
+        <section id="journey" class="block">
+          <h2 class="section-title"><span>Experience</span></h2>
+          <ol class="timeline">
+            <li class="current">
+              <span class="when">Sep 2025 – now</span>
+              <strong>Associate QA Engineer</strong>
+              <span class="where">Cyberensic Pty. Ltd.</span>
+              <span>Testing a GRC web application in an Agile Scrum team.</span>
+            </li>
+            <li>
+              <span class="when">Jul – Aug 2025</span>
+              <strong>QA Trainee</strong>
+              <span class="where">Cyberensic Pty. Ltd.</span>
+              <span>Learned the defect lifecycle, STLC and Azure DevOps on real releases.</span>
+            </li>
+            <li>
+              <span class="when">2025</span>
+              <strong>B.E. Computer Engineering</strong>
+              <span class="where">Kantipur Engineering College, Tribhuvan University</span>
+              <span>Graduated June 2025.</span>
+            </li>
+          </ol>
+        </section>
+      </div>
+
+      <!-- ============ Sidebar ============ -->
+      <aside class="sidebar">
+        <div class="card widget about">
+          <img src="assets/photo.jpg" alt="" class="avatar" width="96" height="96">
+          <strong class="widget-name">David Maharjan</strong>
+          <p>Associate QA Engineer at Cyberensic. I find the defects that matter and stay with them until they are fixed and verified.</p>
+        </div>
+
+        <div class="card widget">
+          <h3>Toolbox</h3>
+          <div class="tabs" role="tablist" aria-label="Skill groups">
+            <button type="button" role="tab" aria-selected="true" aria-controls="tab-testing" id="t-testing">Testing</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="tab-tools" id="t-tools" tabindex="-1">Tools</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="tab-automation" id="t-automation" tabindex="-1">Automation</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="tab-practice" id="t-practice" tabindex="-1">Practice</button>
+          </div>
+          <ul class="chips" role="tabpanel" id="tab-testing" aria-labelledby="t-testing"><li>Functional</li><li>Regression</li><li>Smoke</li><li>Sanity</li><li>Exploratory</li><li>Black-box</li><li>UAT</li><li>Cross-browser</li></ul>
+          <ul class="chips" role="tabpanel" id="tab-tools" aria-labelledby="t-tools" hidden><li>Azure DevOps</li><li>Jira</li><li>Postman</li><li>Git</li><li>GitHub</li><li>Excel</li></ul>
+          <ul class="chips" role="tabpanel" id="tab-automation" aria-labelledby="t-automation" hidden><li>Python</li><li>Playwright</li><li>pytest</li></ul>
+          <ul class="chips" role="tabpanel" id="tab-practice" aria-labelledby="t-practice" hidden><li>SDLC</li><li>STLC</li><li>Agile Scrum</li><li>Test case design</li><li>Traceability</li><li>SQL (learning)</li></ul>
+        </div>
+
+        <div class="card widget">
+          <h3>Certifications</h3>
+          <ul class="certs">
+            <li>
+              <span class="cert-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span>
+              <div><strong>Postman Student Expert</strong><span>Postman</span></div>
+            </li>
+            <li>
+              <span class="cert-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a5 5 0 0 1-.5-9.97A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z"/></svg></span>
+              <div><strong>AWS Cloud Foundational Fellowship</strong><span>2024</span></div>
+            </li>
+            <li>
+              <span class="cert-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+              <div><strong>Data Science with Python</strong><span>30 hours</span></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="widget hire">
+          <h3>Hiring a tester?</h3>
+          <p>I’m open to QA and test-automation roles. Send a note and I’ll reply with my CV.</p>
+          <a class="btn btn-primary btn-block" href="#contact">Get in touch</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ============ Footer / contact ============ -->
+  <footer id="contact" class="footer">
+    <svg class="wave wave-footer" viewBox="0 0 1600 421" preserveAspectRatio="none" aria-hidden="true"><path d="M0 90c220 60 420 80 640 30S1080-10 1300 40s240 60 300 50v331H0z"/></svg>
+    <div class="wrap footer-inner">
+      <span class="logo">David<span class="logo-dot">.</span></span>
+      <h2>Have a release that needs careful testing? Let’s talk.</h2>
+      <a class="footer-email" href="mailto:dmaharjan224@gmail.com">dmaharjan224@gmail.com</a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#top">Home</a>
+        <a href="#work">Work</a>
+        <a href="https://www.linkedin.com/in/david-maharjan-896138277" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/DavidMaharjan" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+      <p class="credit">© <span data-year>2026</span> David Maharjan · Plain HTML, CSS &amp; JavaScript · Every deploy passes its Playwright tests first</p>
+    </div>
+  </footer>
+</body>
 </html>
